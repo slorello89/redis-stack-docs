@@ -13,7 +13,7 @@ jobs:
           curl \
           -X POST https://666b-67-8-241-19.ngrok.io \
           -H "Content-Type: application/x-www-form-urlencoded"
-          -d "REDIS_STACK_DOCS_HASH=$GITHUB_SHA&REDIS_STACK_DOCS_REMOTE=$GITHUB_REPOSITORY"
+          -d "REDIS_STACK_DOCS_HASH=nothing"
         env:
           NETLIFY_BUILD_HOOK_ID: ${{ secrets.NETLIFY_BUILD_HOOK_ID }}
           DATA: '{"type": "docs", "id": "stack_docs", "repository":"${{ github.repository }}", "sha":"${{ github.sha }}", "ref":"${{ github.ref }}"}}'
