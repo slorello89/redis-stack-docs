@@ -4,7 +4,7 @@ git clone --recurse-submodules https://$PRIVATE_ACCESS_TOKEN@github.com/redis-st
 cd redis-stack-website
 npm install autoprefixer
 
-apt-get install -y python3-pip
+sudo apt-get install -y python3-pip
 
 pip3 install -r requirements.txt
 
