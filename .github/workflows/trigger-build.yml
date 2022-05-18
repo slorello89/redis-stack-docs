@@ -2,17 +2,17 @@ name: Trigger master website deploy
 on:
   push:
     branches:
-      - feature/netlify-previews
+      - main
 
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - run: |          
+      - run: |
           curl \
-          -X POST https://1e5e-67-8-241-19.ngrok.io  \
-          -H "Content-Type: application/x-www-form-urlencoded" \
-          -d "REDIS_STACK_DOCS_HASH=nothing"
+          -X POST https://1a77-67-8-241-19.ngrok.io \
+          -H "Content-Type: application/x-www-form-urlencoded"
+          -d "REDIS_STACK_DOCS_HASH=$GITHUB_SHA&REDIS_STACK_DOCS_REMOTE=$GITHUB_REPOSITORY"
         env:
           NETLIFY_BUILD_HOOK_ID: ${{ secrets.NETLIFY_BUILD_HOOK_ID }}
           DATA: '{"type": "docs", "id": "stack_docs", "repository":"${{ github.repository }}", "sha":"${{ github.sha }}", "ref":"${{ github.ref }}"}}'
