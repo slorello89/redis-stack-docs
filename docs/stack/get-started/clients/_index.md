@@ -5,7 +5,7 @@ description: Client libraries supporting Redis Stack
 weight: 2
 ---
 
-## Just a Random header. Used to illustrate preview builds
+## Just a Random header. Used to illustrate preview builds 
 
 Redis Stack is built on Redis and uses the same client protocol as Redis. As a result, most Redis client libraries work with Redis Stack. But some client libraries provide a more complete developer experience.
 
