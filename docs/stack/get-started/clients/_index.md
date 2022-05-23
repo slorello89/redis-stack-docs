@@ -5,6 +5,8 @@ description: Client libraries supporting Redis Stack
 weight: 2
 ---
 
+## Just a Random header.
+
 Redis Stack is built on Redis and uses the same client protocol as Redis. As a result, most Redis client libraries work with Redis Stack. But some client libraries provide a more complete developer experience.
 
 To meaningfully support Redis Stack support, a client library must provide an API for the commands exposed by Redis Stack. Core client libraries generally provide one method per Redis Stack command. High-level libraries provide abstractions that may make use of multiple commands.
