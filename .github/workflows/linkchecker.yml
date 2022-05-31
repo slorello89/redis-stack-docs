@@ -1,7 +1,7 @@
 name: Link checker
 on:
-  push: [main]
-  pull_request: [main]
+  push: [link-checks]
+  pull_request: [link-checks]
 
 jobs:
   linkChecker:
