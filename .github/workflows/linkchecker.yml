@@ -25,4 +25,4 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v1.5.0
         with:
-          args: https://localhost:1313
+          args: http://localhost:1313
