@@ -1,0 +1,26 @@
+name: Link checker
+on:
+  push: 
+    branches: [main]
+  pull_request: 
+    branches: [main]
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          extended: true
+          hugo-version: '0.91.2'
+      - name: build site
+        run: . netlify.bash
+        env:
+          PRIVATE_ACCESS_TOKEN: ${{ secrets.PRIVATE_ACCESS_TOKEN }}      
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.5.0
+        with:
+          args: '/home/runner/work/redis-stack-docs/redis-stack-docs/website/public/**/*.html'
